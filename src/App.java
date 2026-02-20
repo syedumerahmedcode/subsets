@@ -1,21 +1,28 @@
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
         /**
-         * Given an integer array nums of unique elements, return all possible subsets (the power set).
-
-The solution set must not contain duplicate subsets. Return the solution in any order.
-
- 
-
-Example 1:
-
-Input: nums = [1,2,3]
-Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
-Example 2:
-
-Input: nums = [0]
-Output: [[],[0]]
+         * Given an integer array nums of unique elements, return all possible
+         * subsets (the power set).
+        
+         *          *The solution set must not contain duplicate subsets. Return the
+         * solution in any order.
+         *
+         *
+        
+         *          *Example 1:
+        
+         *          *Input: nums = [1,2,3] Output:
+         * [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]] Example 2:
+        
+         *          *Input: nums = [0] Output: [[],[0]]
+         * 
          */
+        int[] nums = { 1, 2, 3 };
+        Solution solution = new Solution();
+        List<List<Integer>> result = solution.subsets(nums);
+        System.out.println("The possible subsets are: "+result);
     }
 }
